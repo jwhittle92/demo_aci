@@ -1,0 +1,14 @@
+tenant: Student_Tenant
+vrf: production
+app_profile: web_app
+
+bridge_domains:
+- Web_BD
+- App_DB
+- DB_BD
+
+
+epgs:
+  - { bd: "Web_BD", epg: "Web" }
+  - { bd: "App_BD", epg: "App"}
+  - { bd: "DB_BD", epg: "DB" }  

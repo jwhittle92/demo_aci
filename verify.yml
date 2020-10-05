@@ -1,0 +1,63 @@
+---
+- name: Configure ACI Tenant Policies
+  hosts: apic
+  connection: local
+  gather_facts: False
+  vars:
+    creds: &login
+      host: "{{ inventory_hostname }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      validate_certs: no
+
+  tasks: 
+
+  - name: Query tenant status
+    cisco.aci.aci_tenant:
+      <<: *login
+      tenant: "{{ tenant }}"
+      state: query
+    register: tenant_query
+
+  - name: Query VRF
+    cisco.aci.aci_vrf:
+     <<: *login
+     vrf: "{{ vrf }}"
+     tenant: "{{ tenant }}"
+     state: query
+    register: vrf_query
+
+  - name: Query BDs
+    cisco.aci.aci_bd:
+      <<: *login
+      tenant: "{{ tenant }}"
+      vrf: "{{ vrf }}"
+      bd: "{{ item  }}"
+    loop:
+      "{{ bridge_domains }}"
+    register: bd_query
+
+  - name: Create App Profile
+    cisco.aci.aci_ap:
+      <<: *login
+      tenant: "{{ tenant }}"
+      ap: "{{ app_profile }}"
+    register: ap_query
+
+  - name: Create EPGs
+    cisco.aci.aci_epg:
+      <<: *login
+      tenant: "{{ tenant }}"
+      ap: "{{ app_profile }}"
+      epg: "{{ item.epg }}"
+      bd: "{{ item.bd }}"
+    loop:
+      "{{ epgs }}"
+    register: epg_query
+
+
+  -  debug: msg="{{ tenant_query }}"
+  -  debug: msg="{{ vrf_query }}"
+  -  debug: msg="{{ bd_query }}"
+  -  debug: msg="{{ ap_query }}"
+  -  debug: msg="{{ epg_query }}"
