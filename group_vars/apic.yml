@@ -17,3 +17,16 @@ epgs:
   - { bd: "Test", epg: "IDM_VL1913_DEV_LINUX" }
   - { bd: "Test", epg: "IDM_VL1915_DEV_VM" }
   - { bd: "Test", epg: "IDM_VL1802_VMN_WORKSTATION" }
+  - { bd: "Test", epg: "IDM_VL1777_VMK_MGMT" }
+  - { bd: "Test", epg: "IDM_VL1778_VMK_MGMT" }
+  - { bd: "Test", epg: "IDM_VL1814_VMK_VMOTION" }
+  - { bd: "Test", epg: "IDM_VL1775_VMN_ILO" }
+  - { bd: "Test", epg: "IDM_VL1700_VMN_ADMIN_B" }
+  - { bd: "Test", epg: "IDM_VL1809_VMN_NFS" }
+  - { bd: "Test", epg: "IDM_VL1852_LB_INSIDE" }
+  - { bd: "Test", epg: "IDM_VL3100_DMZ_LB_OUTSIDE" }
+  - { bd: "Test", epg: "IDM_VL3101_DMZ_LB_INSIDE" }
+  - { bd: "Test", epg: "IDM_VL3201_STAGE" }
+  - { bd: "Test", epg: "IDM_VL1852_LB_INSIDE" }
+  - { bd: "Test", epg: "IDM_VL1820_RP_NGINX" }
+  - { bd: "Test", epg: "IDM_VL1720_CLUSTER" }
