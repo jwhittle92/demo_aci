@@ -1,6 +1,6 @@
-tenant: BMGF
+tenant: MBDC
 vrf: production
-app_profile: IDM
+app_profile: MBDC_AppProf
 
 bridge_domains:
 - Web_BD
@@ -9,24 +9,22 @@ bridge_domains:
 - Test
 
 epgs:
-  - { bd: "Test", epg: "IDM_VL1901_DEV" }
-  - { bd: "Test", epg: "IDM_VL1813_VMK_ISCSILEFT" }
-  - { bd: "Test", epg: "IDM_VL1815_VMK_ISCSIRIGHT" }
-  - { bd: "Test", epg: "IDM_VL1801_VMN_CORP" }
-  - { bd: "Test", epg: "IDM_VL1810_VMN_CORP_DATA" }
-  - { bd: "Test", epg: "IDM_VL1913_DEV_LINUX" }
-  - { bd: "Test", epg: "IDM_VL1915_DEV_VM" }
-  - { bd: "Test", epg: "IDM_VL1802_VMN_WORKSTATION" }
-  - { bd: "Test", epg: "IDM_VL1777_VMK_MGMT" }
-  - { bd: "Test", epg: "IDM_VL1778_VMK_MGMT" }
-  - { bd: "Test", epg: "IDM_VL1814_VMK_VMOTION" }
-  - { bd: "Test", epg: "IDM_VL1775_VMN_ILO" }
-  - { bd: "Test", epg: "IDM_VL1700_VMN_ADMIN_B" }
-  - { bd: "Test", epg: "IDM_VL1809_VMN_NFS" }
-  - { bd: "Test", epg: "IDM_VL1852_LB_INSIDE" }
-  - { bd: "Test", epg: "IDM_VL3100_DMZ_LB_OUTSIDE" }
-  - { bd: "Test", epg: "IDM_VL3101_DMZ_LB_INSIDE" }
-  - { bd: "Test", epg: "IDM_VL3201_STAGE" }
-  - { bd: "Test", epg: "IDM_VL1852_LB_INSIDE" }
-  - { bd: "Test", epg: "IDM_VL1820_RP_NGINX" }
-  - { bd: "Test", epg: "IDM_VL1720_CLUSTER" }
+  - { bd: "Test", epg: "Epic_Lawson_245_EPG" }
+  - { bd: "Test", epg: "MB_AH_Redun_699_EPG" }
+  - { bd: "Test", epg: "Mail_and_Backups_151_EPG" }
+  - { bd: "Test", epg: "Network_150_EPG" }
+  - { bd: "Test", epg: "Servers_260_EPG" }
+  - { bd: "Test", epg: "SAN_148_EPG" }
+  - { bd: "Test", epg: "Servers_149_EPG" }
+  - { bd: "Test", epg: "Servers_102_EPG" }
+  - { bd: "Test", epg: "PXE_305_EPG" }
+  - { bd: "Test", epg: "Radiology_144_EPG" }
+  - { bd: "Test", epg: "Servers_216_EPG" }
+  - { bd: "Test", epg: "Epic_Citrix_152_EPG" }
+  - { bd: "Test", epg: "GS_MB_210_EPG" }
+  - { bd: "Test", epg: "Data_Dom_246_EPG" }
+  - { bd: "Test", epg: "Varian_162_EPG" }
+  - { bd: "Test", epg: "QS_106_EPG" }
+  - { bd: "Test", epg: "Mckesson_139_EPG" }
+  - { bd: "Test", epg: "PCI_1500_EPG" }
+  - { bd: "Test", epg: "Mcafee_1895_EPG" }
