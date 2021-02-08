@@ -1,6 +1,7 @@
 tenant: Prod
 vrf: production
 app_profile: Web_App
+pod: 1
 
 bridge_domains:
 - Web_BD
