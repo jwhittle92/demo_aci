@@ -1,7 +1,7 @@
 
 ---
 - name: Map EPGs to ports
-  hosts: adc_apic
+  hosts: apic
   connection: local
   gather_facts: False
   vars:
