@@ -1,30 +1,35 @@
-tenant: MBDC
+tenant: Prod
 vrf: production
-app_profile: MBDC_AppProf
+app_profile: Web_App
 
 bridge_domains:
 - Web_BD
 - App_DB
 - DB_BD
-- Test
 
 epgs:
-  - { bd: "Test", epg: "Epic_Lawson_245_EPG" }
-  - { bd: "Test", epg: "MB_AH_Redun_699_EPG" }
-  - { bd: "Test", epg: "Mail_and_Backups_151_EPG" }
-  - { bd: "Test", epg: "Network_150_EPG" }
-  - { bd: "Test", epg: "Servers_260_EPG" }
-  - { bd: "Test", epg: "SAN_148_EPG" }
-  - { bd: "Test", epg: "Servers_149_EPG" }
-  - { bd: "Test", epg: "Servers_102_EPG" }
-  - { bd: "Test", epg: "PXE_305_EPG" }
-  - { bd: "Test", epg: "Radiology_144_EPG" }
-  - { bd: "Test", epg: "Servers_216_EPG" }
-  - { bd: "Test", epg: "Epic_Citrix_152_EPG" }
-  - { bd: "Test", epg: "GS_MB_210_EPG" }
-  - { bd: "Test", epg: "Data_Dom_246_EPG" }
-  - { bd: "Test", epg: "Varian_162_EPG" }
-  - { bd: "Test", epg: "QS_106_EPG" }
-  - { bd: "Test", epg: "Mckesson_139_EPG" }
-  - { bd: "Test", epg: "PCI_1500_EPG" }
-  - { bd: "Test", epg: "Mcafee_1895_EPG" }
+  - { bd: "Web_BD", epg: "Web" }
+  - { bd: "App_BD", epg: "App" }
+  - { bd: "DB_BD", epg: "DB" }
+
+epgs_domains:
+  - { domain: "phys", epg: "Web" }
+  - { domain: "phys", epg: "App" }
+  - { domain: "phys", epg: "DB" }
+
+
+int_profile:
+
+- { int_type: "switch_port", profile: "L101", selector: "1-10", polgro: "Auto-Access", interface: "21" }
+- { int_type: "switch_port", profile: "L101", selector: "1-11", polgro: "Auto-Access", interface: "22" }
+- { int_type: "switch_port", profile: "L101", selector: "1-12", polgro: "Auto-Access", interface: "23" }
+- { int_type: "switch_port", profile: "L101", selector: "1-13", polgro: "Auto-Access", interface: "24" }
+- { int_type: "switch_port", profile: "L101", selector: "1-14", polgro: "Auto-Access", interface: "25" }
+
+
+epg_ports:
+- { epg: "Web", vlan: "10", int_mode: "native", int_type: "switch_port", interface: "1/10", leaf: "101" }
+- { epg: "Web", vlan: "11", int_mode: "native", int_type: "switch_port", interface: "1/11", leaf: "101" }
+- { epg: "App", vlan: "12", int_mode: "native", int_type: "switch_port", interface: "1/12", leaf: "101" }
+- { epg: "App", vlan: "13", int_mode: "native", int_type: "switch_port", interface: "1/13", leaf: "102" }
+- { epg: "DB", vlan: "14", int_mode: "native", int_type: "switch_port", interface: "1/14", leaf: "101" }
