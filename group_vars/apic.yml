@@ -5,7 +5,7 @@ pod: 1
 
 bridge_domains:
 - Web_BD
-- App_DB
+- App_BD
 - DB_BD
 
 epgs:
@@ -21,16 +21,16 @@ epgs_domains:
 
 int_profile:
 
-- { int_type: "switch_port", profile: "L101", selector: "1-10", polgro: "Auto-Access", interface: "21" }
-- { int_type: "switch_port", profile: "L101", selector: "1-11", polgro: "Auto-Access", interface: "22" }
-- { int_type: "switch_port", profile: "L101", selector: "1-12", polgro: "Auto-Access", interface: "23" }
-- { int_type: "switch_port", profile: "L101", selector: "1-13", polgro: "Auto-Access", interface: "24" }
-- { int_type: "switch_port", profile: "L101", selector: "1-14", polgro: "Auto-Access", interface: "25" }
+- { int_type: "switch_port", profile: "L101", selector: "1-10", polgro: "Auto-Access", interface: "10" }
+- { int_type: "switch_port", profile: "L101", selector: "1-11", polgro: "Auto-Access", interface: "11" }
+- { int_type: "switch_port", profile: "L101", selector: "1-12", polgro: "Auto-Access", interface: "12" }
+- { int_type: "switch_port", profile: "L101", selector: "1-13", polgro: "Auto-Access", interface: "13" }
+- { int_type: "switch_port", profile: "L101", selector: "1-14", polgro: "Auto-Access", interface: "14" }
 
 
 epg_ports:
 - { epg: "Web", vlan: "10", int_mode: "native", int_type: "switch_port", interface: "1/10", leaf: "101" }
 - { epg: "Web", vlan: "11", int_mode: "native", int_type: "switch_port", interface: "1/11", leaf: "101" }
 - { epg: "App", vlan: "12", int_mode: "native", int_type: "switch_port", interface: "1/12", leaf: "101" }
-- { epg: "App", vlan: "13", int_mode: "native", int_type: "switch_port", interface: "1/13", leaf: "102" }
+- { epg: "App", vlan: "13", int_mode: "native", int_type: "switch_port", interface: "1/13", leaf: "101" }
 - { epg: "DB", vlan: "14", int_mode: "native", int_type: "switch_port", interface: "1/14", leaf: "101" }
