@@ -1,4 +1,4 @@
-tenant: Prod
+tenant: Prod_Demo
 vrf: production
 app_profile: Web_App
 pod: 1
